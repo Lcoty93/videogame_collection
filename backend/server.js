@@ -20,9 +20,6 @@ if(process.env.NODE_ENV !== "production") {
     app.use(cors());
 }
 
-app.get("/", (req, res) => {
-    res.send("Hello world!");
-})
 
 app.use("/games", gamesRoute);
 
