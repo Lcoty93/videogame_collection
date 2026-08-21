@@ -6,7 +6,7 @@ function Home() {
     const [videogames, setVideogames] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3000/games")
+        fetch("/games")
         .then(res => res.json())
         .then(data => setVideogames(data));
     }, [])

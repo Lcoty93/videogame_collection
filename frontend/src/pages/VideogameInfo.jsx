@@ -8,7 +8,7 @@ function VideogameInfo() {
 
     useEffect(() => {
         const fetchVideogame = async () => {
-            const response = await fetch(`http://localhost:3000/games/${id}`);
+            const response = await fetch(`/games/${id}`);
 
             const data = await response.json();
 

@@ -16,7 +16,7 @@ function EditVideogame() {
 
         useEffect(() => {
         const getVideogame = async () => {
-            const response = await fetch(`http://localhost:3000/games/${id}`);
+            const response = await fetch(`/games/${id}`);
 
             const videogame = await response.json();
 
@@ -35,7 +35,7 @@ function EditVideogame() {
 
         setLoading(true);
 
-        await fetch(`http://localhost:3000/games/${id}`, {
+        await fetch(`/games/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

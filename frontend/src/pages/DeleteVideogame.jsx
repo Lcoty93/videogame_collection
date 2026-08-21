@@ -12,7 +12,7 @@ function DeleteVideogame() {
 
         setLoading(true);
         
-        await fetch(`http://localhost:3000/games/${id}`, {
+        await fetch(`/games/${id}`, {
             method: "DELETE",
         });
 
