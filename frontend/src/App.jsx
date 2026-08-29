@@ -6,6 +6,7 @@ import EditVideogame from "./pages/EditVideogame";
 import DeleteVideogame from "./pages/DeleteVideogame";
 import CreateVideogame from "./pages/CreateVideogame";
 import Navbar from "./components/Navbar";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/edit/:id" element={<EditVideogame />} />
           <Route path="/games/:id" element={<VideogameInfo />} />
           <Route path="/delete/:id" element={<DeleteVideogame />} />
+          <Route path="/*" element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
   )
