@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
 function ErrorPage() {
-    return (<>
-    <h1>404: Page not found!</h1>
-    <Link to="/">Return Home</Link>
-    </>
+    return (<div className="errorPage">
+    <h1>404: Page not found</h1>
+    <Link to="/" className="errorLink">Return Home</Link>
+    </div>
     )
 }
 

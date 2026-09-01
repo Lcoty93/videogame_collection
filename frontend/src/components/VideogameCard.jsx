@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function VideoGameCard({ videogame }) {
     return(<div className="game-card">
-                <h3>{videogame.title}</h3>
+                <h3 >{videogame.title}</h3>
                 <p>{videogame.console}</p>
                 <p>Played: {videogame.played ? "Yes" : "No"}</p>
                 <p>{`Rating: ${videogame.rating}/10`}</p>
