@@ -37,5 +37,19 @@ https://videogame-collection.onrender.com
 - Render
 - MongoDB Atlas
 
+## CRUD screenshots
+### Create
+<img width="1915" height="926" alt="image" src="https://github.com/user-attachments/assets/62f526ac-0d92-4ae4-8563-cbd132504b1a" />
+
+### Update
+<img width="1919" height="921" alt="image" src="https://github.com/user-attachments/assets/3ae14988-007d-4503-b332-64c403475278" />
+
+### Delete
+<img width="1922" height="921" alt="image" src="https://github.com/user-attachments/assets/b882c85c-a1f7-4315-a026-beef07a9f13c" />
+
+### 404
+<img width="1912" height="927" alt="image" src="https://github.com/user-attachments/assets/00bdb2f6-bcbb-48e1-8c76-31060ccf1dab" />
+
+
 ## Author
 **Luke Coty**
