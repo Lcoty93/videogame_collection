@@ -5,7 +5,7 @@ function VideoGameCard({ videogame }) {
                 <h3>{videogame.title}</h3>
                 <p>{videogame.console}</p>
                 <p>Played: {videogame.played ? "Yes" : "No"}</p>
-                <p>{`${videogame.rating}/10`}</p>
+                <p>{`Rating: ${videogame.rating}/10`}</p>
                 <div>
                     <Link to={`/games/${videogame._id}`}><button>Info</button></Link>
                     {" | "}
