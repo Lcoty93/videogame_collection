@@ -32,7 +32,9 @@ main {
   justify-content: space-between;
   background-color: #222;
   color: white;
-  padding: .75rem;
+  padding: .50rem;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 
 .footer{
@@ -49,8 +51,7 @@ main {
 }
 
 .links a,
-.links a:visited,
-.detailsTitle {
+.links a:visited {
   color: #9D00FF;
   text-decoration: none;
   font-weight: 700;
@@ -74,7 +75,7 @@ main {
 
 .game-card h3{
  font-size: 1.3rem;
- font-weight: 700;
+ font-weight: 800;
  margin-bottom: .75rem;
 }
 
@@ -84,6 +85,7 @@ main {
   padding: 0.5rem;
   background-color: #9D00FF;
   color: white;
+  font-size: 1rem;
 }
 
 .game-card button:hover {
@@ -93,6 +95,7 @@ main {
 .game-card p {
   margin: .4rem;
   color: #d1d5db;
+  font-size: 1.25rem;
 }
 
 .game-card:hover{
