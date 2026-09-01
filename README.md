@@ -5,6 +5,9 @@ A full-stack MERN application for managing my personal game collection. Users ca
 ## Live Application
 https://videogame-collection.onrender.com
 
+<img width="1909" height="886" alt="image" src="https://github.com/user-attachments/assets/23f37c8c-0417-4e50-9c87-a2b107924cf1" />
+
+
 ## Features
 
 - View a collection of video games
