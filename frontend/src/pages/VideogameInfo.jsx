@@ -23,13 +23,13 @@ function VideogameInfo() {
         return <p>Loading...</p>
     }
 
-    return(<>
-        <h1>Videogame Details:</h1>
-        <h3>{videogame.title}</h3>
-        <p>{videogame.console}</p>
-        <p>Played: {videogame.played ? "Yes" : "No"}</p>
-        <p>{`${videogame.rating}/10`}</p>
-    </>)
+    return(<div className="game-card">
+            <h1 className="detailsTitle">Videogame Details</h1>
+            <h3>{videogame.title}</h3>
+            <p>{videogame.console}</p>
+            <p>Played: {videogame.played ? "Yes" : "No"}</p>
+            <p>{`${videogame.rating}/10`}</p>
+        </div>)
 }
 
 export default VideogameInfo;
