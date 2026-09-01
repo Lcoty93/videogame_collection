@@ -7,6 +7,8 @@ https://videogame-collection.onrender.com
 
 <img width="1914" height="925" alt="image" src="https://github.com/user-attachments/assets/c3c568bd-070e-4be8-aae3-f4c33764bbaa" />
 
+## Features
+Version 2.0 is coming with an Admin role and guests can suggest new video games to play.
 
 ## Features
 
