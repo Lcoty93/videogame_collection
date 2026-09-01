@@ -55,7 +55,8 @@ function EditVideogame() {
     };
 
     return(<>
-        {success && (<p>Videogame edited successfully!</p>)}
+        <h1 className="formTitle">Edit Videogame</h1>
+        {success && (<p className="formSuccess">Videogame edited successfully!</p>)}
 
         <VideoGameForm 
             title={title}

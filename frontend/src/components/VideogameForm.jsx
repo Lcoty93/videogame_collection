@@ -14,7 +14,6 @@ function VideoGameForm({
 }) {
     return(
         <form onSubmit={handleSubmit} className="game-form">
-            <h1 className="formTitle">Edit Videogame</h1>
             <div className="form-group">
                 <label>Title:</label>
                 <input

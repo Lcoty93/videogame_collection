@@ -27,14 +27,16 @@ function DeleteVideogame() {
         navigate("/");
     }
 
-    return(<>
-    <h2>Are you sure you want to delete this Videogame?</h2>
+    return(<div className="deleteForm">
+    <h2>Delete this Videogame?</h2>
 
             {success && (<p>Videogame deleted successfully!</p>)}
-
-            <button onClick={handleDelete} disabled={loading}>Delete</button>
-            <button onClick={handleCancel} disabled={loading}>Cancel</button>
-    </>)
+            <div>
+                <button onClick={handleDelete} disabled={loading}>Delete</button>
+                {` | `}
+                <button onClick={handleCancel} disabled={loading}>Cancel</button>
+            </div>
+    </div>)
 }
 
 export default DeleteVideogame;

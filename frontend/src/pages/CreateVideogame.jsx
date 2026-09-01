@@ -36,7 +36,7 @@ function CreateVideogame() {
         }, 1500);
     };
 
-    return(<>
+    return(<div className="CreateForm">
         <h1>Create Videogame</h1>
         {success && (<p>Videogame created successfully!</p>)}
 
@@ -53,7 +53,7 @@ function CreateVideogame() {
             buttonText="Create Videogame"
             loading={loading}
         />
-    </>)
+    </div>)
 }
 
 export default CreateVideogame;
