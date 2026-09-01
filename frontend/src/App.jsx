@@ -7,12 +7,14 @@ import DeleteVideogame from "./pages/DeleteVideogame";
 import CreateVideogame from "./pages/CreateVideogame";
 import Navbar from "./components/Navbar";
 import ErrorPage from "./pages/ErrorPage";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <BrowserRouter> 
       <Navbar />
 
+      <main>
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/create" element={<CreateVideogame />} />
@@ -21,6 +23,9 @@ function App() {
           <Route path="/delete/:id" element={<DeleteVideogame />} />
           <Route path="/*" element={<ErrorPage />} />
       </Routes>
+      </main>
+
+      <Footer />
     </BrowserRouter>
   )
 }

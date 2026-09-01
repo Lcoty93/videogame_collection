@@ -13,12 +13,11 @@ function Home() {
 
     return(
         <>
-        <h1>Luke's Videogame Collection:</h1>
-
+            <div className="games-container">
             {videogames.map((videogame) => (
                 <VideoGameCard key={videogame._id} videogame={videogame}/>
             ))}
-        
+            </div>
         </>
     )
     
