@@ -2,6 +2,8 @@ import express from "express";
 
 import Videogame from "../models/gamesModel.js";
 
+import protectAdmin from "../middleware/authMiddleware.js";
+
 const router = express.Router();
 
 router.get("/", async (req, res) => {
@@ -14,7 +16,7 @@ router.get("/", async (req, res) => {
     }
 })
 
-router.post("/", async (req, res) => {
+router.post("/", protectAdmin, async (req, res) => {
     try {
         const videogame = await Videogame.create(req.body);
         res.status(201).json(videogame);
@@ -37,7 +39,7 @@ router.get("/:id", async (req, res) => {
     }
 })
 
-router.put("/:id", async (req, res) => {
+router.put("/:id", protectAdmin, async (req, res) => {
     try {
         const videogame = await Videogame.findByIdAndUpdate(req.params.id,
             req.body,
@@ -57,7 +59,7 @@ router.put("/:id", async (req, res) => {
     }
 })
 
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", protectAdmin, async (req, res) => {
     try {
         const videogame = await Videogame.findByIdAndDelete(req.params.id);
         if(!videogame) {
