@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import VideoGameForm from "../components/VideogameForm";
+import { useAuth } from "../context/AuthContent";
 
 function CreateVideogame() {
     const [title, setTitle] = useState("");
@@ -10,6 +11,7 @@ function CreateVideogame() {
     const [rating, setRating] = useState(0);
     const [success, setSuccess] = useState(false);
     const [loading, setLoading] = useState(false);
+    const { token } = useAuth();
 
     const navigate = useNavigate();
 
@@ -22,6 +24,7 @@ function CreateVideogame() {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
+                Authorization: `Bearer ${token}`,
             },
             body: JSON.stringify({
                 title,
@@ -30,6 +33,15 @@ function CreateVideogame() {
                 rating,
             }),
         });
+
+        if(response.status === 401) {
+            logout();
+            navigate("/admin/login");
+
+            return;
+        }
+
+
         setSuccess(true);
         setTimeout(() => {
             navigate("/");

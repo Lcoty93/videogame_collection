@@ -11,10 +11,22 @@ function DeleteVideogame() {
         e.preventDefault();
 
         setLoading(true);
+
+        const token = localStorage.getItem("adminToken");
         
         await fetch(`/games/${id}`, {
             method: "DELETE",
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
         });
+
+        if(response.status === 401) {
+            logout();
+            navigate("/admin/login");
+
+            return;
+        }
 
         setSuccess(true);
 

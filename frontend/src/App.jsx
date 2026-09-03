@@ -8,6 +8,7 @@ import CreateVideogame from "./pages/CreateVideogame";
 import Navbar from "./components/Navbar";
 import ErrorPage from "./pages/ErrorPage";
 import Footer from "./components/Footer";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/edit/:id" element={<EditVideogame />} />
           <Route path="/games/:id" element={<VideogameInfo />} />
           <Route path="/delete/:id" element={<DeleteVideogame />} />
+          <Route path="/admin/login" element={<Login />} />
           <Route path="/*" element={<ErrorPage />} />
       </Routes>
       </main>

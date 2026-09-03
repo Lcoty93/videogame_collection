@@ -35,10 +35,13 @@ function EditVideogame() {
 
         setLoading(true);
 
+        const token = localStorage.getItem("adminToken");
+
         await fetch(`/games/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
+                Authorization: `Bearer ${token}`,
             },
             body: JSON.stringify({
                 title,
@@ -47,6 +50,13 @@ function EditVideogame() {
                 rating,
             }),
         });
+
+        if(response.status === 401) {
+            logout();
+            navigate("/admin/login");
+
+            return;
+        }
 
         setSuccess(true);
         setTimeout(() => {
