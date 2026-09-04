@@ -32,6 +32,8 @@ function Navbar() {
                 {!isAdmin && (
                     <>
                         {" | "}
+                        <Link to="/suggestion">Suggest Videogame</Link>
+                        {" | "}
                         <Link to="/admin/login">Admin login</Link>
                     </>
                 )}

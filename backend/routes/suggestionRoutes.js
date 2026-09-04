@@ -1,6 +1,7 @@
 import express from "express";
 
 import Suggestion from "../models/suggestion.js";
+import protectAdmin from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
@@ -30,6 +31,16 @@ router.post("/", async (req, res) => {
         return res.status(500).json({
             message: "Unable to submit suggestion."
         })
+    }
+})
+
+router.get("/", protectAdmin, async (req, res) => {
+    try {
+        const suggestion = await Suggestion.find({});
+        res.status(200).json(suggestion);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({message: error.message});
     }
 })
 
