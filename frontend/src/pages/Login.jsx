@@ -47,12 +47,12 @@ function Login() {
         }
     }
 
-    return(<div>
+    return(<div className="suggestion">
         <h1>Admin Login</h1>
         {error && <p role="alert">{error}</p>}
-        <form onSubmit={handleSubmit}>
-            <div>
-                <label>username:</label>
+        <form onSubmit={handleSubmit} className="suggestionForm">
+            <div className="form-group">
+                <label>Username:</label>
                 <input 
                 type="text"
                 value={username}
@@ -60,8 +60,8 @@ function Login() {
                  />
             </div>
 
-            <div>
-                <label>password:</label>
+            <div className="form-group">
+                <label>Password:</label>
                 <input 
                 type="password"
                 value={password}
@@ -69,7 +69,10 @@ function Login() {
                 />
             </div>
 
-            <button type="submit" disabled={isLoading}>
+            <button 
+            type="submit" 
+            className="formButton"
+            disabled={isLoading}>
                 {isLoading ? "Logging in..." : "Login"}
             </button>
         </form>

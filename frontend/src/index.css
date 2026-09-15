@@ -297,3 +297,87 @@ main {
   height: 100%;
   text-align: center;
 }
+
+
+.suggestion h1{
+  background-color: #181818;
+  color: #9D00FF;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 3rem;
+  margin: 0px;
+}
+
+.suggestion p {
+  background-color: #181818;
+  color: #9D00FF;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 2rem;
+  margin: 0px;
+}
+
+
+.suggestionForm{
+  background-color: #181818;
+  color: white;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.formSuccess{
+  background-color: #181818;
+  color: #9D00FF;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 2rem;
+  margin: 0px;
+}
+
+
+.form-group{
+  padding: .25rem;
+  margin: .25rem;
+  color: #d1d5db;
+  font-size: 1.5rem;
+}
+
+.form-group .reason {
+  vertical-align: top;
+}
+
+.form-group input, select, textarea{
+  font-size: 1.4rem;
+  border-radius: 10px;
+  padding: .25rem;
+}
+
+.gameSuggestionTitle {
+  background-color: #181818;
+  color: #9D00FF;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 3rem;
+  margin: 0px;
+}

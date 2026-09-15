@@ -14,7 +14,7 @@ function DeleteVideogame() {
 
         const token = localStorage.getItem("adminToken");
         
-        await fetch(`/games/${id}`, {
+        const response = await fetch(`/games/${id}`, {
             method: "DELETE",
             headers: {
                 Authorization: `Bearer ${token}`,

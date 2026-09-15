@@ -42,11 +42,11 @@ function SuggestionForm(){
 
     }
 
-    return(<>
+    return(<div className="suggestion">
     <h1>Suggestion Form</h1>
     {success && (<p>Suggestion created successfully!</p>)}
-    <form onSubmit={handleSubmit}>
-        <div>
+    <form onSubmit={handleSubmit} className="suggestionForm">
+        <div className="form-group">
             <label>Title:</label>
             <input 
             type="text"
@@ -56,7 +56,7 @@ function SuggestionForm(){
             />
         </div>
 
-        <div>
+        <div className="form-group">
             <label>Console:</label>
             <input type="text"
             required
@@ -65,22 +65,24 @@ function SuggestionForm(){
             />
         </div>
 
-        <div>
-            <label>Reason:</label>
+        <div className="form-group">
+            <label className="reason">Reason:</label>
             <textarea  rows={5} cols={50}
             required
+            type="text"
             value={reason}
             onChange={(e) => setReason(e.target.value)}
             />
         </div>
 
         <button 
+        className="formButton"
         type="submit"
         disabled={loading}
         >{loading ? "Creating..." : "Submit"}</button>
     </form>
     
-    </>)
+    </div>)
 }
 
 export default SuggestionForm;

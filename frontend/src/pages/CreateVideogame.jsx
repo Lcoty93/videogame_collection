@@ -20,7 +20,7 @@ function CreateVideogame() {
 
         setLoading(true);
 
-        await fetch("/games", {
+        const response = await fetch("/games", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

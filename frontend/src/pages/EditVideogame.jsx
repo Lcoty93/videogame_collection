@@ -37,7 +37,7 @@ function EditVideogame() {
 
         const token = localStorage.getItem("adminToken");
 
-        await fetch(`/games/${id}`, {
+        const response = await fetch(`/games/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

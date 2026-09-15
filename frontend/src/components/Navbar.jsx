@@ -26,7 +26,9 @@ function Navbar() {
                         {" | "}
                         <Link to="/create">Create Videogame</Link>
                         {" | "}
-                        <button type="button" onClick={handleLogout}>Logout</button>
+                        <Link to="/adminsuggestion">Suggestions</Link>
+                        {" | "}
+                        <button type="button" onClick={handleLogout} className="formButton">Logout</button>
                     </>
                 )}
                 {!isAdmin && (
