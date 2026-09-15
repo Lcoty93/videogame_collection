@@ -5,6 +5,8 @@ import cors from "cors";
 import path from "path";
 
 import gamesRoute from "./routes/gamesRoute.js";
+import suggestionRoutes from "./routes/suggestionRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
 
 dotenv.config();
 
@@ -22,6 +24,10 @@ if(process.env.NODE_ENV !== "production") {
 
 
 app.use("/games", gamesRoute);
+
+app.use("/api/suggestions", suggestionRoutes);
+
+app.use("/api/auth", authRoutes);
 
 if(process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname,"../frontend/dist")))

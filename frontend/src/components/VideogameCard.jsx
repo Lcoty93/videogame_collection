@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
 
+import { useAuth } from "../context/AuthContent";
+
 function VideoGameCard({ videogame }) {
+    const { isAdmin } = useAuth();
+
+
     return(<div className="game-card">
                 <div className={`${videogame.console.toLowerCase().replace(/\s+/g, '-')}`}>
                 <h3 >{videogame.title}</h3>
@@ -10,10 +15,14 @@ function VideoGameCard({ videogame }) {
                 <p>{`Rating: ${videogame.rating}/10`}</p>
                 <div>
                     <Link to={`/games/${videogame._id}`}><button>Info</button></Link>
-                    {" | "}
-                    <Link to={`/edit/${videogame._id}`}><button>Edit</button></Link>
-                    {" | "}
-                    <Link to={`/delete/${videogame._id}`}><button>Delete</button></Link>
+                    {isAdmin && (
+                        <>
+                            {" | "}
+                            <Link to={`/edit/${videogame._id}`}><button>Edit</button></Link>
+                            {" | "}
+                            <Link to={`/delete/${videogame._id}`}><button>Delete</button></Link>
+                        </>
+                    )}
                 </div>
             </div>)
 }
