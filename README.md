@@ -13,10 +13,10 @@ Version 3.0 have better dashboards with top games and even show the games that a
 
 ## Features
 
-- **Guests:**
+**Guests:**
 - View a collection of video games
 - Suggest a video game
--** Admin:**
+**Admin:**
 - Add a new video game
 - Edit an existing video game
 - Delete a video game
