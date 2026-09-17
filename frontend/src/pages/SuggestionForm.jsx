@@ -67,7 +67,7 @@ function SuggestionForm(){
 
         <div className="form-group">
             <label className="reason">Reason:</label>
-            <textarea  rows={5} cols={50}
+            <textarea  rows={5}
             required
             type="text"
             value={reason}
