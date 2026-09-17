@@ -16,7 +16,9 @@ function Navbar() {
     return(
         <nav className="navbar">
             <div className="nav-left">
-                <img src="/controller.png" alt="logo" className="logo"/>
+                <Link to="/">
+                    <img src="/controller.png" alt="logo" className="logo"/>
+                </Link>
                 <p>Luke's Videogame Collection</p>
             </div>
             <div className="links">
@@ -33,10 +35,8 @@ function Navbar() {
                 )}
                 {!isAdmin && (
                     <>
-                        {" | "}
-                        <Link to="/suggestion">Suggest Videogame</Link>
-                        {" | "}
-                        <Link to="/admin/login">Admin login</Link>
+                        <Link to="/suggestion">Suggest</Link>
+                        <Link to="/admin/login">Admin</Link>
                     </>
                 )}
             </div>

@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import SuggestionForm from "./pages/SuggestionForm";
 import AdminSuggestions from "./pages/AdminSuggestions";
+import Collection from "./pages/Collection";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/admin/login" element={<Login />} />
           <Route path="/suggestion" element={<SuggestionForm />} />
           <Route path="/adminsuggestion" element={<AdminSuggestions />} />
+          <Route path="/collection" element={<Collection />} />
           <Route path="/*" element={<ErrorPage />} />
       </Routes>
       </main>
