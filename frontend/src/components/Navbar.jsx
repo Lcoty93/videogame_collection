@@ -23,19 +23,17 @@ function Navbar() {
             </div>
             <div className="links">
                 <Link to="/">Home</Link>
+                <Link to="/collection">Collection</Link>
                 {isAdmin && (
                     <>
-                        {" | "}
                         <Link to="/create">Create Videogame</Link>
-                        {" | "}
                         <Link to="/adminsuggestion">Suggestions</Link>
-                        {" | "}
                         <button type="button" onClick={handleLogout} className="formButton">Logout</button>
                     </>
                 )}
                 {!isAdmin && (
                     <>
-                        <Link to="/suggestion">Suggest</Link>
+                        <Link to="/suggestion">Suggest Game</Link>
                         <Link to="/admin/login">Admin</Link>
                     </>
                 )}
